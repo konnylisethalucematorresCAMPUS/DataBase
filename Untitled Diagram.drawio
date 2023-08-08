@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-08T14:08:49.596Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="_to-q6fR8AxsQpk9jOl6" version="21.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-08T14:25:01.881Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="081bleHdw_s8f3wR0rWA" version="21.6.6" type="github">
   <diagram name="Page-1" id="T80rOR9vDIjqRzHl7qig">
-    <mxGraphModel dx="3060" dy="2995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3272" dy="4095" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -100,29 +100,59 @@
         <mxCell id="cB3qJ_cgSJbhxKvkDimK-39" value="&lt;div&gt;Id_Reparaciones&lt;/div&gt;&lt;div&gt;Fecha&lt;/div&gt;&lt;div&gt;Id_Diagnostico&lt;br&gt;&lt;/div&gt;&lt;div&gt;Id_Factura&lt;/div&gt;&lt;div&gt;Id_Cliente&lt;/div&gt;&lt;div&gt;Id_vehiculo&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="cB3qJ_cgSJbhxKvkDimK-38" vertex="1">
           <mxGeometry x="11" y="33" width="169" height="97" as="geometry" />
         </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ILn246hxc0myOcRo-HGs-1" target="ILn246hxc0myOcRo-HGs-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="ILn246hxc0myOcRo-HGs-1" target="ILn246hxc0myOcRo-HGs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-1" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;background-color: rgb(51, 0, 102);&quot;&gt;Usuario&lt;/span&gt;&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#330066;strokeColor=#330066;" vertex="1" parent="1">
-          <mxGeometry x="-999" y="-1477" width="120" height="120" as="geometry" />
+          <mxGeometry x="-999" y="-1437" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-2" value="&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;Roll&lt;/font&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#330066;" vertex="1" parent="1">
-          <mxGeometry x="-839" y="-1557" width="121" height="120" as="geometry" />
+          <mxGeometry x="-839" y="-1517" width="121" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-4" value="&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;Cliente&lt;/font&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#330066;" vertex="1" parent="1">
-          <mxGeometry x="-838" y="-1397" width="120" height="120" as="geometry" />
+          <mxGeometry x="-839" y="-1357" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-6" value="Automovil" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;startSize=23;" vertex="1" parent="1">
-          <mxGeometry x="-1001" y="-640" width="120" height="120" as="geometry" />
+          <mxGeometry x="-1241" y="-560" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-7" value="MarcaAutomovil" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#00FF00;startSize=23;" vertex="1" parent="1">
-          <mxGeometry x="-841" y="-800" width="120" height="120" as="geometry" />
+          <mxGeometry x="-1119" y="-720" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-8" value="Accesorios" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#00FF00;startSize=23;" vertex="1" parent="1">
-          <mxGeometry x="-841" y="-480" width="120" height="120" as="geometry" />
+          <mxGeometry x="-1160" y="-400" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-9" value="PiezasUtilizadas" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#00FF00;startSize=23;" vertex="1" parent="1">
-          <mxGeometry x="-681" y="-360" width="120" height="120" as="geometry" />
+          <mxGeometry x="-1079" y="-240" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ILn246hxc0myOcRo-HGs-10" value="Seguro" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#00FF00;startSize=23;" vertex="1" parent="1">
-          <mxGeometry x="-1121" y="-800" width="120" height="120" as="geometry" />
+          <mxGeometry x="-1361" y="-720" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ILn246hxc0myOcRo-HGs-11" target="ILn246hxc0myOcRo-HGs-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ILn246hxc0myOcRo-HGs-11" target="ILn246hxc0myOcRo-HGs-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ILn246hxc0myOcRo-HGs-11" target="ILn246hxc0myOcRo-HGs-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-11" value="&lt;font color=&quot;#ffffff&quot;&gt;InformacionPersonal&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#B266FF;" vertex="1" parent="1">
+          <mxGeometry x="-959" y="-2199" width="159" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-12" value="&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;TipoDocumento&lt;/font&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#B266FF;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-2319" width="121" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-13" value="TipoAutomovil" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#330066;fillColor=#00FF00;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="-1239" y="-880" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-16" value="&lt;font color=&quot;#ffffff&quot;&gt;Telefono&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#B266FF;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-2079" width="121" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ILn246hxc0myOcRo-HGs-19" value="&lt;font color=&quot;#ffffff&quot;&gt;Correo&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#B266FF;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-1919" width="121" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
