@@ -10,3 +10,15 @@
 /home/skylab-104/Documents/DataBase/Dominio/obj/Debug/net7.0/refint/Dominio.dll
 /home/skylab-104/Documents/DataBase/Dominio/obj/Debug/net7.0/Dominio.pdb
 /home/skylab-104/Documents/DataBase/Dominio/obj/Debug/net7.0/ref/Dominio.dll
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\bin\Debug\net7.0\Dominio.deps.json
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\bin\Debug\net7.0\Dominio.dll
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\bin\Debug\net7.0\Dominio.pdb
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.csproj.AssemblyReference.cache
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfoInputs.cache
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfo.cs
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.csproj.CoreCompileInputs.cache
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.dll
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\refint\Dominio.dll
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\Dominio.pdb
+E:\DatosUser\Music\Proyecto.Incidencias\Dominio\obj\Debug\net7.0\ref\Dominio.dll

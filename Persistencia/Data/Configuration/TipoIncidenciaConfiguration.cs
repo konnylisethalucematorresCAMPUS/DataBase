@@ -9,15 +9,19 @@ public class TipoIncidenciaConfiguration : IEntityTypeConfiguration<TipoIncidenc
     public void Configure(EntityTypeBuilder<TipoIncidencia> builder)
     {
         builder.ToTable("TipoIncidencia");
-        builder.Property(p => p.Id)
-                .IsRequired();
-                
-        builder.Property(p => p.NombreTipoIncidencia)
-                .IsRequired()
-                .HasMaxLength(200);
 
-        builder.Property(p => p.DescripcionTipoIncidencia)
-        .IsRequired()
-        .HasMaxLength(200);
+            builder.Property(p => p.Id)
+            .HasColumnType("int")
+            .IsRequired();
+                    
+            builder.Property(p => p.NombreTipoIncidencia)
+            .HasColumnType("varchar")
+            .HasMaxLength(200)
+            .IsRequired();
+
+            builder.Property(p => p.DescripcionTipoIncidencia)
+            .HasColumnType("varchar")
+            .HasMaxLength(200)
+            .IsRequired();
     }
 }

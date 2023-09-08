@@ -11,7 +11,7 @@ using Persistencia;
 namespace Persistencia.Data.Migrations
 {
     [DbContext(typeof(IncidenciasContext))]
-    [Migration("20230907202937_InitialCreate")]
+    [Migration("20230908055318_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -31,12 +31,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionArea")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("NombreArea")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -67,7 +67,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("NombreCategoriaContacto")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -83,7 +83,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionContacto")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("IdCategoriaContacto")
                         .HasColumnType("int");
@@ -91,7 +91,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<int>("IdPersona")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdTipoCon")
+                    b.Property<int>("IdTipoContacto")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -100,7 +100,7 @@ namespace Persistencia.Data.Migrations
 
                     b.HasIndex("IdPersona");
 
-                    b.HasIndex("IdTipoCon");
+                    b.HasIndex("IdTipoContacto");
 
                     b.ToTable("Contacto", (string)null);
                 });
@@ -114,7 +114,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionDetalleIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("IdEstado")
                         .HasColumnType("int");
@@ -155,7 +155,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionEstado")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -171,7 +171,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("date");
@@ -213,12 +213,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionLugar")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("NombreLugar")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -236,12 +236,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionNivelIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("NombreNivelIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -257,7 +257,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("NombrePeriferico")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -273,12 +273,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("ApellidoPersona")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("DireccionPersona")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("IdTipoDocumento")
                         .HasColumnType("int");
@@ -286,7 +286,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("NombrePersona")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -304,12 +304,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionRol")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -325,7 +325,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionTipoContacto")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -341,12 +341,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("AbreviaturaTipoDocumento")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("NombreTipoDocumento")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -362,12 +362,12 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("DescripcionTipoIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("NombreTipoIncidencia")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -383,7 +383,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.Property<string>("Password")
                         .HasColumnType("longtext");
@@ -391,7 +391,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar");
 
                     b.HasKey("Id");
 
@@ -452,7 +452,7 @@ namespace Persistencia.Data.Migrations
 
                     b.HasOne("Dominio.TipoContacto", "TipoContacto")
                         .WithMany("Contactos")
-                        .HasForeignKey("IdTipoCon")
+                        .HasForeignKey("IdTipoContacto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

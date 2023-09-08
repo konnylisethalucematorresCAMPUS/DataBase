@@ -9,15 +9,19 @@ public class LugarConfiguration : IEntityTypeConfiguration<Lugar>
     public void Configure(EntityTypeBuilder<Lugar> builder)
     {
         builder.ToTable("Lugar");
-        builder.Property(p => p.Id)
+
+                builder.Property(p => p.Id)
+                .HasColumnType("int")
                 .IsRequired();
 
-        builder.Property(p => p.NombreLugar)
-                .IsRequired()
-                .HasMaxLength(100);
-                
-        builder.Property(p => p.DescripcionLugar)
-                .IsRequired()
-                .HasMaxLength(200);
+                builder.Property(p => p.NombreLugar)
+                .HasColumnType("varchar")
+                .HasMaxLength(100)
+                .IsRequired();
+                        
+                builder.Property(p => p.DescripcionLugar)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
     }
 }

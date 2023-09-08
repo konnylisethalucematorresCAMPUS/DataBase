@@ -9,15 +9,19 @@ public class TipoDocumentoConfiguration : IEntityTypeConfiguration<TipoDocumento
     public void Configure(EntityTypeBuilder<TipoDocumento> builder)
     {
         builder.ToTable("TipoDocumento");
-        builder.Property(p => p.Id)
-                .IsRequired();
-                
-        builder.Property(p => p.NombreTipoDocumento)
-                .IsRequired()
-                .HasMaxLength(200);
 
-        builder.Property(p => p.AbreviaturaTipoDocumento)
-        .IsRequired()
-        .HasMaxLength(100);
+            builder.Property(p => p.Id)
+            .HasColumnType("int")
+            .IsRequired();
+                    
+            builder.Property(p => p.NombreTipoDocumento)
+            .HasColumnType("varchar")
+            .HasMaxLength(200)
+            .IsRequired();
+
+            builder.Property(p => p.AbreviaturaTipoDocumento)
+            .HasColumnType("varchar")
+            .HasMaxLength(100)
+            .IsRequired();
     }
 }

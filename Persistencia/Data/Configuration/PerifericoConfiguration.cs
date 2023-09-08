@@ -9,11 +9,14 @@ public class PerifericoConfiguration : IEntityTypeConfiguration<Periferico>
     public void Configure(EntityTypeBuilder<Periferico> builder)
     {
         builder.ToTable("Periferico");
-        builder.Property(p => p.Id)
-                .IsRequired();
-                
-        builder.Property(p => p.NombrePeriferico)
-                .IsRequired()
-                .HasMaxLength(200);
+
+            builder.Property(p => p.Id)
+            .HasColumnType("int")
+            .IsRequired();
+                    
+            builder.Property(p => p.NombrePeriferico)
+            .HasColumnType("varchar")
+            .HasMaxLength(200)
+            .IsRequired();
     }
 }

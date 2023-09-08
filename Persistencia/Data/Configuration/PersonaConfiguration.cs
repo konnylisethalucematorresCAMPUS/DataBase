@@ -8,28 +8,32 @@ namespace Persistencia.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Persona> builder)
         {
-            // Aquí puedes configurar las propiedades de la entidad Marca
-            // utilizando el objeto 'builder'.
+
             builder.ToTable("Persona");
-            builder.Property(p => p.Id)
-                    .IsRequired();
-                    
-            builder.Property(p => p.NombrePersona)
-                .IsRequired()
-                .HasMaxLength(200);
 
-            builder.Property(p => p.ApellidoPersona)
-                .IsRequired()
-                .HasMaxLength(200);
+                builder.Property(p => p.Id)
+                .HasColumnType("int")
+                .IsRequired();
+                        
+                builder.Property(p => p.NombrePersona)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
 
-            builder.Property(p => p.DireccionPersona)
-                    .IsRequired()
-                    .HasMaxLength(200);
+                builder.Property(p => p.ApellidoPersona)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
 
-            builder.HasOne(y => y.TipoDocumento)
-            .WithMany(l => l.Personas)
-            .HasForeignKey(z => z.IdTipoDocumento)
-            .IsRequired();
+                builder.Property(p => p.DireccionPersona)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
+
+                builder.HasOne(y => y.TipoDocumento)
+                .WithMany(l => l.Personas)
+                .HasForeignKey(z => z.IdTipoDocumento)
+                .IsRequired();
         }
     }
 }

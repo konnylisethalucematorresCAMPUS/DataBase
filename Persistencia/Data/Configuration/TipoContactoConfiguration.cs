@@ -9,11 +9,14 @@ public class TipoContactoConfiguration : IEntityTypeConfiguration<TipoContacto>
     public void Configure(EntityTypeBuilder<TipoContacto> builder)
     {
         builder.ToTable("TipoContacto");
-        builder.Property(p => p.Id)
-                .IsRequired();
-                
-        builder.Property(p => p.DescripcionTipoContacto)
-                .IsRequired()
-                .HasMaxLength(200);
+
+            builder.Property(p => p.Id)
+            .HasColumnType("int")
+            .IsRequired();
+                    
+            builder.Property(p => p.DescripcionTipoContacto)
+            .HasColumnType("varchar")
+            .HasMaxLength(200)
+            .IsRequired();
     }
 }

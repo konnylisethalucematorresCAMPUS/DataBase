@@ -287,7 +287,7 @@ namespace Persistencia.Data.Migrations
                     DescripcionContacto = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     IdPersona = table.Column<int>(type: "int", nullable: false),
-                    IdTipoCon = table.Column<int>(type: "int", nullable: false),
+                    IdTipoContacto = table.Column<int>(type: "int", nullable: false),
                     IdCategoriaContacto = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -306,8 +306,8 @@ namespace Persistencia.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Contacto_TipoContacto_IdTipoCon",
-                        column: x => x.IdTipoCon,
+                        name: "FK_Contacto_TipoContacto_IdTipoContacto",
+                        column: x => x.IdTipoContacto,
                         principalTable: "TipoContacto",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -424,9 +424,9 @@ namespace Persistencia.Data.Migrations
                 column: "IdPersona");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Contacto_IdTipoCon",
+                name: "IX_Contacto_IdTipoContacto",
                 table: "Contacto",
-                column: "IdTipoCon");
+                column: "IdTipoContacto");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DetalleIncidencia_IdEstado",

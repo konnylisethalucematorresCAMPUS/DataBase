@@ -9,15 +9,19 @@ public class NivelIncidenciaConfiguration : IEntityTypeConfiguration<NivelIncide
     public void Configure(EntityTypeBuilder<NivelIncidencia> builder)
     {
         builder.ToTable("NivelIncidencia");
-        builder.Property(p => p.Id)
-                .IsRequired();
-                
-        builder.Property(p => p.NombreNivelIncidencia)
-                .IsRequired()
-                .HasMaxLength(200);
 
-        builder.Property(p => p.DescripcionNivelIncidencia)
-                .IsRequired()
-                .HasMaxLength(200);
+                builder.Property(p => p.Id)
+                .HasColumnType("int")
+                .IsRequired();
+                        
+                builder.Property(p => p.NombreNivelIncidencia)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
+
+                builder.Property(p => p.DescripcionNivelIncidencia)
+                .HasColumnType("varchar")
+                .HasMaxLength(200)
+                .IsRequired();
     }
 }

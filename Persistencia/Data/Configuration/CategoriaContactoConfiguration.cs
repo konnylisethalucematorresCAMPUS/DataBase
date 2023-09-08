@@ -9,11 +9,15 @@ public class CategoriaContactoConfiguration : IEntityTypeConfiguration<Categoria
     public void Configure(EntityTypeBuilder<CategoriaContacto> builder)
     {
         builder.ToTable("CategoriaContacto");
-        builder.Property(p => p.Id)
-        .IsRequired();
+        
+            builder.Property(p => p.Id)
+            .HasColumnType("int")
+            .IsRequired();
 
-        builder.Property(p => p.NombreCategoriaContacto)
-        .IsRequired()
-        .HasMaxLength(50);
+            builder.Property(p => p.NombreCategoriaContacto)
+            .HasColumnType("varchar")
+            .HasMaxLength(50)
+            .IsRequired();
+        
     }
 }
