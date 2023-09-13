@@ -6,11 +6,11 @@ using Persistencia;
 
 namespace Aplicacion.Repository;
 
-public class GenericRepositoryB<T> : IGenericRepositoryB<T> where T : BaseEntityA
+public class GenericRepositoryB<T> : IGenericRepository<T> where T : BaseEntity
 {
-    private readonly IncidenciasContext _context;
+    private readonly ApiContext _context;
 
-    public GenericRepositoryB(IncidenciasContext context)
+    public GenericRepositoryB(ApiContext context)
     {
         _context = context;
     }
@@ -38,6 +38,11 @@ public class GenericRepositoryB<T> : IGenericRepositoryB<T> where T : BaseEntity
     public virtual async Task<T> GetByIdAsync(int id)
     {
         return await _context.Set<T>().FindAsync(id);
+    }
+
+    public Task<T> GetByIdAsync(string id)
+    {
+        throw new NotImplementedException();
     }
 
     public virtual void Remove(T entity)

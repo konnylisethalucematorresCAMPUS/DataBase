@@ -1,5 +1,8 @@
+using Entities;
+
 namespace Dominio.Interfaces;
-public interface IDetalleIncidenciaRepository : IGenericRepositoryB<DetalleIncidencia>
+
+public interface IDetalleIncidenciaRepository : IGenericRepository<DetalleIncidencia>
 {
     
 }

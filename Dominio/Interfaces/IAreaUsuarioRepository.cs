@@ -1,6 +1,8 @@
-/* namespace Dominio.Interfaces;
-public interface IAreaUsuarioRepository : IGenericRepositoryB<AreaUsuario>
+using Entities;
+
+namespace Dominio.Interfaces;
+
+public interface IAreaUsuarioRepository :  IGenericRepository<AreaUsuario>
 {
     
 }
-} */

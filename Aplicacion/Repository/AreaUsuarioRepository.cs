@@ -1,13 +1,14 @@
-/* using Dominio;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class AreaUsuarioRepository : GenericRepositoryB<AreaUsuario>, IAreaUsuarioRepository
-    {
-        public AreaUsuarioRepository(IncidenciasContext context) : base(context)
+    public class AreaUsuarioRepository : GenericRepository<AreaUsuario>, IAreaUsuarioRepository
+    { 
+        public AreaUsuarioRepository(ApiContext context) : base(context)
         {
+            
         }
     }
-} */
+}

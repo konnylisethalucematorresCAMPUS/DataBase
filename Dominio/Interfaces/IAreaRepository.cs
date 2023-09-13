@@ -1,5 +1,8 @@
+using Entities;
+
 namespace Dominio.Interfaces;
-public interface IAreaRepository : IGenericRepositoryB<Area>
-{
-    
-}
+
+    public interface IAreaRepository : IGenericRepository<Area>
+    {
+     
+    }

@@ -1,5 +1,8 @@
+using Entities;
+
 namespace Dominio.Interfaces;
-public interface ITipoIncidenciaRepository : IGenericRepositoryB<TipoIncidencia>
+
+public interface ITipoIncidenciaRepository : IGenericRepository<TipoIncidencia>
 {
-    
+        
 }

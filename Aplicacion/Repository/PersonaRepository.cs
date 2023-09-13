@@ -4,9 +4,9 @@ using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class PersonaRepository : GenericRepositoryB<Persona>, IPersonaRepository
+    public class PersonaRepository : GenericRepository<Persona>, IPersonaRepository
     {
-        public PersonaRepository(IncidenciasContext context) : base(context)
+        public PersonaRepository(ApiContext context) : base(context)
         {
         }
     }

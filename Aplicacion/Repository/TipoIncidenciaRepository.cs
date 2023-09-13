@@ -1,12 +1,13 @@
 using Dominio;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class TipoIncidenciaRepository : GenericRepositoryB<TipoIncidencia>, ITipoIncidenciaRepository
+    public class TipoIncidenciaRepository : GenericRepository<TipoIncidencia>, ITipoIncidenciaRepository
     {
-        public TipoIncidenciaRepository(IncidenciasContext context) : base(context)
+        public TipoIncidenciaRepository(ApiContext context) : base(context)
         {
         }
     }

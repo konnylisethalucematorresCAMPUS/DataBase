@@ -1,12 +1,16 @@
-using Dominio;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class CategoriaContactoRepository : GenericRepositoryB<CategoriaContacto>, ICategoriaContactoRepository
+    public class CategoriaContactoRepository : GenericRepository<CategoriaContacto>, ICategoriaContactoRepository
     {
-        public CategoriaContactoRepository(IncidenciasContext context) : base(context)
+        public CategoriaContactoRepository(ApiContext context) : base(context)
         {
         }
     }

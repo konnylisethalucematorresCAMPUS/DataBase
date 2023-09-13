@@ -1,8 +1,13 @@
-namespace Dominio;
-public class Rol : BaseEntityA
+using System.ComponentModel.DataAnnotations;
+using Dominio;
+using iText.Kernel.Crypto.Securityhandler;
+
+namespace Entities;
+
+public class Rol : BaseEntity
 {
-    public string Nombre { get; set; }
-    public string DescripcionRol { get; set; }
-    public ICollection<Usuario> Usuarios { get; set; } = new HashSet<Usuario>();
-    public ICollection<UsuariosRoles> UsuariosRoles { get; set; }
+    public string ?Name_Rol { get; set; }
+    public ICollection<Usuario> ?Usuario { get; set; }
+    public string ?Description_Rol { get; set; }
+    public ICollection<UsuarioRoles> ? UsuarioRoles {get;set;}
 }

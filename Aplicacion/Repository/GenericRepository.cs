@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Dominio;
 using Dominio.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -10,11 +6,12 @@ using Persistencia;
 
 namespace Aplicacion.Repository;
 
+
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
-    private readonly IncidenciasContext _context;
+    protected readonly ApiContext _context;
 
-    public GenericRepository(IncidenciasContext context)
+    public GenericRepository(ApiContext context)
     {
         _context = context;
     }
@@ -39,9 +36,14 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return await _context.Set<T>().ToListAsync();
     }
 
-    public virtual async Task<T> GetByIdAsync(string id)
+    public virtual async Task<T> GetByIdAsync(int id)
     {
         return await _context.Set<T>().FindAsync(id);
+    }
+
+    public virtual async Task<T> GetByIdAsync(string id)
+    {
+       return await _context.Set<T>().FindAsync(id);
     }
 
     public virtual void Remove(T entity)

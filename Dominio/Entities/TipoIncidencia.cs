@@ -1,7 +1,12 @@
-namespace Dominio;
-public class TipoIncidencia : BaseEntityA
+using System.ComponentModel.DataAnnotations;
+using Dominio;
+
+namespace Entities;
+
+public class TipoIncidencia : BaseEntity
 {
-    public string NombreTipoIncidencia { get; set; }
-    public string DescripcionTipoIncidencia { get; set; }
-    public ICollection<DetalleIncidencia> DetalleIncidencias { get; set; }
+    public ICollection<DetalleIncidencia> ?DetalleIncidencias { get; set; }
+    public string ?Name_TypeIncidence { get; set; }
+    public string ?Description_TypeIncidence { get; set; }
+
 }

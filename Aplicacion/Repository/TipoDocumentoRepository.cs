@@ -1,12 +1,12 @@
-using Dominio;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class TipoDocumentoRepository : GenericRepositoryB<TipoDocumento>, ITipoDocumentoRepository
+    public class TipoDocumentoRepository : GenericRepository<TipoDocumento>, ITipoDocumentoRepository
     {
-        public TipoDocumentoRepository(IncidenciasContext context) : base(context)
+        public TipoDocumentoRepository(ApiContext context) : base(context)
         {
         }
     }

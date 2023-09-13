@@ -1,5 +1,8 @@
+using Entities;
+
 namespace Dominio.Interfaces;
-public interface ITipoDocumentoRepository : IGenericRepositoryB<TipoDocumento>
+
+public interface ITipoDocumentoRepository : IGenericRepository<TipoDocumento>
 {
     
 }

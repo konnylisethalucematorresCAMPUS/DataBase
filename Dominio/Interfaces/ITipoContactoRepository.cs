@@ -1,5 +1,5 @@
 namespace Dominio.Interfaces;
-public interface ITipoContactoRepository : IGenericRepositoryB<TipoContacto>
+
+public interface ITipoContactoRepository : IGenericRepository<TipoContacto>
 {
-    
 }

@@ -1,39 +1,47 @@
 using Dominio;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistencia.Data.Configuration
+namespace Persistencia.Configuration;
+public class PersonaConfiguration : IEntityTypeConfiguration<Persona>
 {
-    public class PersonaConfiguration : IEntityTypeConfiguration<Persona>
+    public void Configure(EntityTypeBuilder<Persona> builder)
     {
-        public void Configure(EntityTypeBuilder<Persona> builder)
-        {
+        builder.ToTable("Person");
 
-            builder.ToTable("Persona");
 
-                builder.Property(p => p.Id)
-                .HasColumnType("int")
-                .IsRequired();
-                        
-                builder.Property(p => p.NombrePersona)
-                .HasColumnType("varchar")
-                .HasMaxLength(200)
-                .IsRequired();
+        builder.Property(p => p.Id)
+        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .HasColumnName("Id_User")
+        .HasColumnType("int")
+        .IsRequired();
 
-                builder.Property(p => p.ApellidoPersona)
-                .HasColumnType("varchar")
-                .HasMaxLength(200)
-                .IsRequired();
 
-                builder.Property(p => p.DireccionPersona)
-                .HasColumnType("varchar")
-                .HasMaxLength(200)
-                .IsRequired();
+        builder.Property(p => p.Name)
+        .HasColumnName("Name")
+        .HasColumnType("varchar")
+        .HasMaxLength(150)
+        .IsRequired();
 
-                builder.HasOne(y => y.TipoDocumento)
-                .WithMany(l => l.Personas)
-                .HasForeignKey(z => z.IdTipoDocumento)
-                .IsRequired();
-        }
+
+        builder.Property(p => p.Lastname)
+       .HasColumnName("lastname")
+       .HasColumnType("varchar")
+       .HasMaxLength(150)
+       .IsRequired();
+
+        builder.Property(p => p.Id_DocumentType)
+        .HasColumnName("document_type")
+        .HasColumnType("int")
+        .IsRequired();
+
+
+
+        builder.HasOne(u => u.TipoDocumento)
+        .WithMany(a => a.Personas)
+        .HasForeignKey(u => u.Id_DocumentType)
+        .IsRequired();
+
     }
 }

@@ -1,45 +1,38 @@
 using Dominio;
+using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Data.Configuration;
+namespace Persistencia.Configuration;
 public class AreaConfiguration : IEntityTypeConfiguration<Area>
 {
     public void Configure(EntityTypeBuilder<Area> builder)
     {
-        builder.ToTable("Area");
+       
+        builder.ToTable("Areas");
 
             builder.Property(p => p.Id)
+            .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+            .HasColumnName("Id_Area")
             .HasColumnType("int")
             .IsRequired();
 
-            builder.Property(p => p.NombreArea)
+            builder.Property(p => p.Name_Area)
+            .HasColumnName("Namearea")
             .HasColumnType("varchar")
-            .HasMaxLength(50)
+            .HasMaxLength(200)
             .IsRequired();
-            
 
-            builder.Property(p => p.DescripcionArea)
+
+            builder.Property(p => p.Description_Area)
+            .HasColumnName("Descriptionarea")
             .HasColumnType("varchar")
-            .HasMaxLength(100)
+            .HasMaxLength(200)
             .IsRequired();
-            
 
-            builder
-                .HasMany(p => p.Personas)
-                .WithMany(p => p.Areas)
-                .UsingEntity<AreaPersona>(
-                    j => j
-                        .HasOne(pt => pt.Persona)
-                        .WithMany(t => t.AreaPersonas)
-                        .HasForeignKey(pt => pt.IdPersona),
-                    j => j
-                        .HasOne(pt => pt.Area)
-                        .WithMany(p => p.AreaPersonas)
-                        .HasForeignKey(pt => pt.IdArea),
-                    j =>
-                    {
-                        j.HasKey(t => new { t.IdArea, t.IdPersona });
-                    });
+
+
+          
     }
 }

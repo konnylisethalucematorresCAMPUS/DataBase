@@ -1,5 +1,8 @@
+using Entities;
+
 namespace Dominio.Interfaces;
-public interface ICategoriaContactoRepository : IGenericRepositoryB<CategoriaContacto>
+
+public interface ICategoriaContactoRepository : IGenericRepository<CategoriaContacto>
 {
     
 }

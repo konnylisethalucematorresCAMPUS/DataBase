@@ -1,12 +1,12 @@
-using Dominio;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
 namespace Aplicacion.Repository
 {
-    public class EstadoRepository : GenericRepositoryB<Estado>, IEstadoRepository
+    public class EstadoRepository : GenericRepository<Estado>, IEstadoRepository
     {
-        public EstadoRepository(IncidenciasContext context) : base(context)
+        public EstadoRepository(ApiContext context) : base(context)
         {
         }
     }

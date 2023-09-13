@@ -1,13 +1,12 @@
-using Dominio;
 using Dominio.Interfaces;
+using Entities;
 using Persistencia;
 
-namespace Aplicacion.Repository
+namespace Aplicacion.Repository;
+public class AreaRepository : GenericRepository<Area>, IAreaRepository
 {
-    public class AreaRepository : GenericRepositoryB<Area>, IAreaRepository
+    public AreaRepository(ApiContext context) : base(context)
     {
-        public AreaRepository(IncidenciasContext context) : base(context)
-        {
-        }
+        
     }
 }

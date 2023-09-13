@@ -1,27 +1,37 @@
 using Dominio;
+using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistencia.Data.Configuration;
+namespace Persistencia.Configuration;
 
-public class NivelIncidenciaConfiguration : IEntityTypeConfiguration<NivelIncidencia>
-{
+public class LevelIncidenceConfiguration : IEntityTypeConfiguration<NivelIncidencia> 
+{   
     public void Configure(EntityTypeBuilder<NivelIncidencia> builder)
     {
-        builder.ToTable("NivelIncidencia");
+        builder.ToTable("LevelIncidence");
+      
 
-                builder.Property(p => p.Id)
-                .HasColumnType("int")
-                .IsRequired();
-                        
-                builder.Property(p => p.NombreNivelIncidencia)
-                .HasColumnType("varchar")
-                .HasMaxLength(200)
-                .IsRequired();
 
-                builder.Property(p => p.DescripcionNivelIncidencia)
-                .HasColumnType("varchar")
-                .HasMaxLength(200)
-                .IsRequired();
+
+            builder.Property(p => p.Id)
+            .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+            .HasColumnName("Id_LevelIncidence")
+            .HasColumnType("int")
+            .IsRequired();
+
+            builder.Property(p => p.Name_LevelIncidence)
+            .HasColumnName("Name_LevelIncidence")
+            .HasColumnType("varchar")
+            .HasMaxLength(80)
+            .IsRequired();
+
+
+            builder.Property(p => p.Description_LevelIncidence)
+            .HasColumnName("Description_LevelIcidence")
+            .HasColumnType("varchar")
+            .HasMaxLength(100)
+            .IsRequired();
     }
 }

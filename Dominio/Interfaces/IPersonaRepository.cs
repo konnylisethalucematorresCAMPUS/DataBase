@@ -1,5 +1,6 @@
 namespace Dominio.Interfaces;
-public interface IPersonaRepository : IGenericRepositoryB<Persona>
+
+public interface IPersonaRepository : IGenericRepository<Persona>
 {
     
 }

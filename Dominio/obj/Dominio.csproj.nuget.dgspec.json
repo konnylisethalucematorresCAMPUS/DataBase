@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DatosUser\\Music\\Proyecto.Incidencias\\Dominio\\Dominio.csproj": {}
+    "C:\\Users\\arcek\\OneDrive\\Imágenes\\incidencesPoject\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "E:\\DatosUser\\Music\\Proyecto.Incidencias\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\arcek\\OneDrive\\Imágenes\\incidencesPoject\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DatosUser\\Music\\Proyecto.Incidencias\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\arcek\\OneDrive\\Imágenes\\incidencesPoject\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "E:\\DatosUser\\Music\\Proyecto.Incidencias\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\DatosUser\\Music\\Proyecto.Incidencias\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\arcek\\OneDrive\\Imágenes\\incidencesPoject\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\arcek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arcek\\OneDrive\\Imágenes\\incidencesPoject\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\arcek\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
